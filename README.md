@@ -1,1 +1,3 @@
 # poc
+
+### This repo contains resources that i used and got successful in my bug bounty...
