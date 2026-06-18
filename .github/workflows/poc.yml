@@ -1,0 +1,11 @@
+name: Escape Sequence PoC
+on:
+  workflow_dispatch:
+jobs:
+  emit-escape-sequences:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Emit terminal escape sequences
+        run: |
+          printf 'ESCAPE_MARKER_START \033]0;HIJACKED_TITLE\007 ESCAPE_MARKER_END\n'
+          printf 'ESCAPE_MARKER_START \033[31mRED_TEXT\033[0m ESCAPE_MARKER_END\n'
